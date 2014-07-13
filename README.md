@@ -10,26 +10,6 @@ https://code.google.com/p/word2vec/
 
 Copyright 2013 Google Inc. All Rights Reserved.
 
-このDockerfileでは、以下の環境のコンテナが構築されます。
-
-| 項目        | バージョン | 備考 |
-|:-----------|:------------|:------------|
-| CentOS     | 7 | ja_JP.UTF-8|
-| MeCab     | 0.996 | --enable-utf8-only|
-| MeCab IPAdic | 2.7.0-20070801 |--with-charset=utf8|
-| GCC | 4.8.2-16 ||
-| word2vec | http://word2vec.googlecode.com/svn/trunk/ | |
-| word2vec  multiple threads patch|http://www.chokkan.org/software/word2vec-multi/word2vec.local.tgz| |
-| ICU | 50.1.2-11 ||
-| RE2 | 20130115-2 ||
-| WordNet | 3.0-21 ||
-| glib2 | 2.36.3-5 ||
-| gflags | 1.3-7 ||
-| string-splitter ||プレーンテキストを正規表現フィルタ、NFKC正規化、分かち書きをしてくれる自作C++プログラム|
-| word2vec-calc ||word2vecで学習したモデルを使ってベクトルの四則演算ができる自作C++プログラム|
-
-word2vecには、[Word2vecの並列実行時の学習速度の改善](http://www.slideshare.net/naoakiokazaki/word2vec)に紹介されていた並列処理の高速化パッチが自動で適用されます。
-
 # イメージ構築
 
 ```bash
@@ -118,6 +98,28 @@ https://code.google.com/p/word2vec/
 https://github.com/naoa/word2vec-calc
 * string-splitter
 https://github.com/naoa/string-splitter
+
+## 環境
+
+このDockerfileでは、以下の環境のコンテナが構築されます。
+
+| 項目        | バージョン | 備考 |
+|:-----------|:------------|:------------|
+| CentOS     | 7 | ja_JP.UTF-8|
+| MeCab     | 0.996 | --enable-utf8-only|
+| MeCab IPAdic | 2.7.0-20070801 |--with-charset=utf8|
+| GCC | 4.8.2-16 ||
+| word2vec | http://word2vec.googlecode.com/svn/trunk/ | |
+| word2vec  multiple threads patch|http://www.chokkan.org/software/word2vec-multi/word2vec.local.tgz| |
+| ICU | 50.1.2-11 ||
+| RE2 | 20130115-2 ||
+| WordNet | 3.0-21 ||
+| glib2 | 2.36.3-5 ||
+| gflags | 1.3-7 ||
+| string-splitter |https://github.com/naoa/string-splitter|プレーンテキストを正規表現フィルタ、NFKC正規化、分かち書きをしてくれる自作C++プログラム|
+| word2vec-calc |https://github.com/naoa/word2vec-calc|word2vecで学習したモデルを使ってベクトルの四則演算ができる自作C++プログラム|
+
+現状、word2vecには[Word2vecの並列実行時の学習速度の改善](http://www.slideshare.net/naoakiokazaki/word2vec)に紹介されていた並列処理の高速化パッチが自動で適用されます。
 
 ## Author
 
