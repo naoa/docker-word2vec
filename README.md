@@ -10,7 +10,7 @@ https://code.google.com/p/word2vec/
 
 Copyright 2013 Google Inc. All Rights Reserved.
 
-# イメージ構築
+## イメージ構築
 
 ```bash
 % git clone https://github.com/naoa/docker-word2vec.git
@@ -19,7 +19,7 @@ Copyright 2013 Google Inc. All Rights Reserved.
 % docker build -t naoa/word2vec .
 ```
 
-# 使い方
+## 使い方
 * コンテナにターミナル接続する場合  
 ```bash
 % docker run -v /var/lib/word2vec:/var/lib/word2vec -i -t naoa/word2vec /bin/bash
