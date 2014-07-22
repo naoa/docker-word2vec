@@ -117,7 +117,7 @@ https://github.com/naoa/string-splitter
 | glib2 | 2.36.3-5 ||
 | gflags | 1.3-7 ||
 | string-splitter |https://github.com/naoa/string-splitter|プレーンテキストを正規表現フィルタ、NFKC正規化、分かち書きをしてくれる自作C++プログラム|
-| word2vec-calc |https://github.com/naoa/word2vec-calc|word2vecで学習したモデルを使ってベクトルの四則演算ができる自作C++プログラム|
+| word2vec-calc |https://github.com/naoa/word2vec-calc|word2vecで学習したモデルを使ってベクトルの足し引き演算ができる自作C++プログラム|
 
 現状、word2vecには[Word2vecの並列実行時の学習速度の改善](http://www.slideshare.net/naoakiokazaki/word2vec)に紹介されていた並列処理の高速化パッチが自動で適用されます。
 
