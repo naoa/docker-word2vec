@@ -58,7 +58,7 @@ bash-4.2# word2vec
 ```
 
 <code>word2vec-calc</code>は、<code>distance</code>や<code>analogy</code>だけでなく、
-自由に四則演算(+-/*)をできるようにし、いくつか出力結果を調整できるようにした
+自由に足し引き演算(+-)をできるようにし、いくつか出力結果を調整できるようにした
 自作C++プログラムです。 https://github.com/naoa/word2vec-calc
 
 * オリジナルのword2vecに同梱されている<code>word-analogy</code>や<code>distance</code>等も利用可能です。
