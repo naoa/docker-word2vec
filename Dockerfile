@@ -36,7 +36,6 @@ RUN tar -xzf word2vec.local.tgz
 
 # word2vec
 RUN svn checkout http://word2vec.googlecode.com/svn/trunk/ word2vec
-RUN cd word2vec ; patch -p1 < ../word2vec.local/word2vec.local.patch 
 RUN cd word2vec ; make ; \
     cp word2vec /usr/local/bin ; cp word2phrase /usr/local/bin ; \
     cp word-analogy /usr/local/bin ; cp distance /usr/local/bin ; \
