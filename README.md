@@ -110,7 +110,7 @@ https://github.com/naoa/string-splitter
 | MeCab IPAdic | 2.7.0-20070801 |--with-charset=utf8|
 | GCC | 4.8.2-16 ||
 | word2vec | https://github.com/svn2github/word2vec.git | |
-| ICU | 50.1.2-11 ||
+| ICU | 42.1-14 ||
 | RE2 | 20130115-2 ||
 | WordNet | 3.0-21 ||
 | glib2 | 2.36.3-5 ||
