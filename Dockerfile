@@ -9,7 +9,9 @@ ENV LC_ALL ja_JP.UTF-8
 RUN yum install -y wget tar vi
 RUN yum install -y gcc make gcc-c++
 RUN yum install -y git patch
-RUN yum install -y icu libicu-devel
+# word2vec-calc利用にあたってはlibicu-4.2.xを必要とするため該当バージョンをインストール。
+RUN yum localinstall -y ftp://fr2.rpmfind.net/linux/centos/6.8/os/x86_64/Packages/libicu-4.2.1-14.el6.x86_64.rpm
+RUN yum localinstall -y ftp://fr2.rpmfind.net/linux/centos/6.8/os/x86_64/Packages/libicu-devel-4.2.1-14.el6.x86_64.rpm
 # CentOS7版のepelはRE2がはいっていなかったので、6版で。
 RUN rpm --import http://ftp.riken.jp/Linux/fedora/epel/RPM-GPG-KEY-EPEL
 RUN yum localinstall -y http://ftp-srv2.kddilabs.jp/Linux/distributions/fedora/epel/6/x86_64/epel-release-6-8.noarch.rpm
