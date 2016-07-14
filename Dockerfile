@@ -8,7 +8,7 @@ ENV LC_ALL ja_JP.UTF-8
 
 RUN yum install -y wget tar vi
 RUN yum install -y gcc make gcc-c++
-RUN yum install -y svn git patch
+RUN yum install -y git patch
 RUN yum install -y icu libicu-devel
 # CentOS7版のepelはRE2がはいっていなかったので、6版で。
 RUN rpm --import http://ftp.riken.jp/Linux/fedora/epel/RPM-GPG-KEY-EPEL
@@ -35,7 +35,7 @@ RUN wget http://www.chokkan.org/software/word2vec-multi/word2vec.local.tgz
 RUN tar -xzf word2vec.local.tgz
 
 # word2vec
-RUN svn checkout http://word2vec.googlecode.com/svn/trunk/ word2vec
+RUN git clone https://github.com/svn2github/word2vec.git
 RUN cd word2vec ; make ; \
     cp word2vec /usr/local/bin ; cp word2phrase /usr/local/bin ; \
     cp word-analogy /usr/local/bin ; cp distance /usr/local/bin ; \
