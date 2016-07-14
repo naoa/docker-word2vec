@@ -10,9 +10,7 @@ RUN yum install -y wget tar vi
 RUN yum install -y gcc make gcc-c++
 RUN yum install -y git patch
 RUN yum install -y icu libicu-devel
-# CentOS7版のepelはRE2がはいっていなかったので、6版で。
-RUN rpm --import http://ftp.riken.jp/Linux/fedora/epel/RPM-GPG-KEY-EPEL
-RUN yum localinstall -y http://ftp-srv2.kddilabs.jp/Linux/distributions/fedora/epel/6/x86_64/epel-release-6-8.noarch.rpm
+RUN yum install -y epel-release
 RUN yum install -y re2 re2-devel
 RUN yum install -y wordnet wordnet-devel glib2 glib2-devel
 RUN yum install -y gflags gflags-devel
